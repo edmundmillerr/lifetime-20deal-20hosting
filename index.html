@@ -3,12 +3,1864 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello world project</title>
+    <title>ARZ Host - Lifetime Hosting Deal | VPS Hosting Hong Kong</title>
+    <meta
+      name="description"
+      content="Unlock the best lifetime hosting deal. Pay once, stay online forever. High-speed VPS hosting in Hong Kong with free lifetime domains."
+    />
+    <meta
+      name="keywords"
+      content="lifetime hosting, vps hosting hong kong, lifetime domain, cheap hosting, one-time payment hosting"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --background: hsl(15, 25%, 98%);
+        --foreground: hsl(318, 28%, 18%);
+        --primary: hsl(318, 28%, 18%);
+        --primary-foreground: hsl(15, 25%, 98%);
+        --secondary: hsl(15, 17%, 76%);
+        --secondary-foreground: hsl(318, 28%, 18%);
+        --muted: hsl(15, 17%, 76%);
+        --muted-foreground: hsl(6, 11%, 51%);
+        --accent: hsl(6, 35%, 72%);
+        --accent-foreground: hsl(318, 28%, 18%);
+        --border: hsl(15, 17%, 76%);
+        --card: hsl(15, 25%, 98%);
+        --card-foreground: hsl(318, 28%, 18%);
+        --blush-pink: hsl(0, 43%, 86%);
+        --dusty-rose: hsl(0, 17%, 70%);
+        --mauve: hsl(6, 11%, 51%);
+        --deep-plum: hsl(318, 28%, 18%);
+        --ivory: hsl(15, 25%, 98%);
+        --radius: 0.75rem;
+      }
+
+      body {
+        font-family:
+          ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        background-color: var(--background);
+        color: var(--foreground);
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      /* Header Styles */
+      .header {
+        background-color: rgba(251, 249, 249, 0.95);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 64px;
+        padding: 0 1.5rem;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--foreground);
+      }
+
+      .logo svg {
+        width: 32px;
+        height: 32px;
+        margin-right: 0.5rem;
+        stroke: var(--primary);
+      }
+
+      .logo span {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+
+      .nav {
+        display: none;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: var(--foreground);
+        transition: color 0.15s;
+      }
+
+      .nav a:hover {
+        color: var(--primary);
+      }
+
+      .nav .nav-primary {
+        font-weight: 500;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        border-radius: var(--radius);
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: all 0.15s;
+        cursor: pointer;
+        text-decoration: none;
+        border: none;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: var(--primary-foreground);
+        padding: 0.5rem 1rem;
+        height: 40px;
+      }
+
+      .btn-primary:hover {
+        background-color: hsl(318, 28%, 25%);
+      }
+
+      .btn-lg {
+        padding: 0.75rem 1.5rem;
+        height: 48px;
+        font-size: 1rem;
+      }
+
+      .btn-outline {
+        border: 1px solid var(--border);
+        background-color: var(--background);
+        color: var(--foreground);
+      }
+
+      .btn-outline:hover {
+        background-color: var(--accent);
+        color: var(--accent-foreground);
+      }
+
+      .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .mobile-menu-btn svg {
+        width: 24px;
+        height: 24px;
+        stroke: var(--foreground);
+      }
+
+      .mobile-nav {
+        display: none;
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .mobile-nav.active {
+        display: flex;
+      }
+
+      .mobile-nav a {
+        text-decoration: none;
+        color: var(--foreground);
+        font-weight: 500;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(
+          to bottom right,
+          var(--background),
+          rgba(235, 204, 204, 0.2)
+        );
+        padding: 5rem 0;
+        text-align: center;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 9999px;
+        border: 1px solid rgba(192, 165, 165, 0.3);
+        background-color: rgba(192, 165, 165, 0.2);
+        padding: 0.25rem 0.75rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+        color: var(--deep-plum);
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+      }
+
+      .hero .highlight {
+        color: var(--primary);
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        color: var(--muted-foreground);
+        margin-bottom: 2rem;
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      /* Section Styles */
+      .section {
+        padding: 4rem 0;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-header h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-header p {
+        font-size: 1.125rem;
+        color: var(--muted-foreground);
+        max-width: 768px;
+        margin: 0 auto;
+      }
+
+      /* Features Grid */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .feature {
+        text-align: center;
+      }
+
+      .feature-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+      }
+
+      .feature-icon.blush {
+        background-color: rgba(235, 204, 204, 0.2);
+      }
+      .feature-icon.dusty {
+        background-color: rgba(192, 165, 165, 0.2);
+      }
+      .feature-icon.mauve {
+        background-color: rgba(162, 103, 105, 0.2);
+      }
+
+      .feature-icon svg {
+        width: 32px;
+        height: 32px;
+        stroke: var(--primary);
+      }
+
+      .feature h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .feature p {
+        color: var(--muted-foreground);
+      }
+
+      /* Pricing Plans */
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .plan-card {
+        background-color: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        position: relative;
+        text-align: center;
+      }
+
+      .plan-card.popular {
+        border-color: var(--primary);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        transform: scale(1.05);
+      }
+
+      .popular-badge {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--primary);
+        color: var(--primary-foreground);
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+
+      .plan-name {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .plan-ideal {
+        color: var(--muted-foreground);
+        margin-bottom: 1rem;
+        font-size: 0.875rem;
+      }
+
+      .plan-price {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 1.5rem;
+      }
+
+      .plan-features {
+        list-style: none;
+        margin-bottom: 1.5rem;
+      }
+
+      .plan-features li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+      }
+
+      .plan-features .check-icon {
+        width: 16px;
+        height: 16px;
+        stroke: #10b981;
+        margin-right: 0.5rem;
+        flex-shrink: 0;
+      }
+
+      /* Benefits Grid */
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        max-width: 768px;
+        margin: 0 auto;
+      }
+
+      .benefit {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .benefit .check-icon {
+        width: 24px;
+        height: 24px;
+        stroke: #10b981;
+        flex-shrink: 0;
+      }
+
+      /* Testimonials */
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .testimonial {
+        background-color: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      .testimonial .star-icon {
+        width: 32px;
+        height: 32px;
+        fill: #fbbf24;
+        stroke: #fbbf24;
+        margin: 0 auto 1rem;
+      }
+
+      .testimonial blockquote {
+        font-size: 1.125rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      .testimonial cite {
+        color: var(--muted-foreground);
+        font-style: normal;
+      }
+
+      /* FAQ */
+      .faq-grid {
+        max-width: 768px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .faq-item {
+        background-color: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+      }
+
+      .faq-question {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      .faq-answer {
+        color: var(--muted-foreground);
+      }
+
+      /* Footer */
+      .footer {
+        background-color: var(--deep-plum);
+        color: var(--ivory);
+        padding: 3rem 0;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .footer-section h3 {
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .footer-section ul {
+        list-style: none;
+      }
+
+      .footer-section ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-section a {
+        color: rgba(248, 237, 235, 0.8);
+        text-decoration: none;
+        transition: color 0.15s;
+      }
+
+      .footer-section a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .footer-brand svg {
+        width: 32px;
+        height: 32px;
+        margin-right: 0.5rem;
+        stroke: var(--ivory);
+      }
+
+      .footer-brand span {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(248, 237, 235, 0.2);
+        margin-top: 2rem;
+        padding-top: 2rem;
+        text-align: center;
+        color: rgba(248, 237, 235, 0.6);
+      }
+
+      /* Background Gradients */
+      .bg-gradient-1 {
+        background: linear-gradient(
+          to bottom right,
+          rgba(235, 204, 204, 0.1),
+          var(--background)
+        );
+      }
+
+      .bg-gradient-2 {
+        background: linear-gradient(
+          to bottom right,
+          rgba(192, 165, 165, 0.1),
+          var(--background)
+        );
+      }
+
+      .bg-gradient-3 {
+        background: linear-gradient(
+          to bottom right,
+          rgba(162, 103, 105, 0.1),
+          var(--background)
+        );
+      }
+
+      .bg-gradient-cta {
+        background: linear-gradient(
+          to bottom right,
+          rgba(59, 33, 51, 0.1),
+          var(--background)
+        );
+      }
+
+      /* Responsive Design */
+      @media (min-width: 768px) {
+        .nav {
+          display: flex;
+        }
+
+        .mobile-menu-btn {
+          display: none;
+        }
+
+        .hero h1 {
+          font-size: 3.75rem;
+        }
+
+        .hero .cta-buttons {
+          flex-direction: row;
+          justify-content: center;
+        }
+
+        .section-header h2 {
+          font-size: 2.5rem;
+        }
+
+        .features-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .benefits-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .container {
+          padding: 0 2rem;
+        }
+
+        .pricing-grid {
+          grid-template-columns: repeat(5, 1fr);
+        }
+
+        .features-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* Utility Classes */
+      .text-center {
+        text-align: center;
+      }
+      .mb-6 {
+        margin-bottom: 1.5rem;
+      }
+      .mb-8 {
+        margin-bottom: 2rem;
+      }
+      .mb-12 {
+        margin-bottom: 3rem;
+      }
+      .w-full {
+        width: 100%;
+      }
+    </style>
   </head>
-
   <body>
-    <div id="root"></div>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div>
+            <a href="https://arzhost.com/" class="logo">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+                <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+                <line x1="6" x2="6.01" y1="6" y2="6" />
+                <line x1="6" x2="6.01" y1="18" y2="18" />
+              </svg>
+              <span>ARZ Host</span>
+            </a>
+          </div>
 
-    <script type="module" src="/client/App.tsx"></script>
+          <!-- Desktop Navigation -->
+          <nav class="nav">
+            <a
+              href="https://arzhost.com/lifetime-web-hosting/"
+              class="nav-primary"
+              >Life Time web Hosting</a
+            >
+            <a href="https://arzhost.com/region-based-vps/">VPS REGION</a>
+            <a
+              href="https://arzhost.com/hosting/kansas-reliable-vps-hosting/"
+              class="nav-primary"
+              >VPS Hosting Hong Kong</a
+            >
+            <a href="https://www.arzhost.com/about-us/">About Us</a>
+            <a href="https://www.arzhost.com/contact-us/">Contact Us</a>
+            <a href="https://arzhost.com/vps/" class="btn btn-primary"
+              >Get Started</a
+            >
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+          <a href="https://arzhost.com/lifetime-web-hosting/"
+            >Life Time web Hosting</a
+          >
+          <a href="https://arzhost.com/region-based-vps/">VPS REGION</a>
+          <a href="https://arzhost.com/hosting/kansas-reliable-vps-hosting/"
+            >VPS Hosting Hong Kong</a
+          >
+          <a href="https://www.arzhost.com/about-us/">About Us</a>
+          <a href="https://www.arzhost.com/contact-us/">Contact Us</a>
+          <a href="https://arzhost.com/vps/" class="btn btn-primary w-full"
+            >Get Started</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div>
+          <div class="badge">
+            High-Speed VPS Hosting in Hong Kong – Built for Global Reach
+          </div>
+          <h1>
+            Unlock the Best
+            <span class="highlight">Lifetime Hosting</span>:<br />
+            One‑Time Payment, Forever Online
+          </h1>
+          <p>
+            💡 Skip monthly bills. Forget renewal stress. Pay once—stay live for
+            life with
+            <a
+              href="https://arzhost.com/"
+              style="
+                color: var(--primary);
+                font-weight: 600;
+                text-decoration: none;
+              "
+              >ARZ Host</a
+            >, the best lifetime hosting solution.
+          </p>
+          <div class="cta-buttons">
+            <a href="https://arzhost.com/vps/" class="btn btn-primary btn-lg">
+              Secure Your Lifetime Hosting + Free Domain Now
+            </a>
+            <a href="#plans" class="btn btn-outline btn-lg"
+              >View Pricing Plans</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Choose Our Hosting Lifetime Deal?</h2>
+          <p>
+            Experience lightning‑fast servers, full control, and a cheap
+            lifetime domain bundled into every plan. Perfect for bloggers, devs,
+            agencies, and growing businesses.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon blush">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m4.93 4.93 4.24 4.24" />
+                <path d="m14.83 9.17 4.24-4.24" />
+                <path d="m14.83 14.83 4.24 4.24" />
+                <path d="m9.17 14.83-4.24 4.24" />
+              </svg>
+            </div>
+            <h3>Lifetime Deal Hosting</h3>
+            <p>Pay once, host forever.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon dusty">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12,6 12,12 16,14" />
+              </svg>
+            </div>
+            <h3>Lifetime Domains</h3>
+            <p>Your domain stays active for life at no extra cost.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon mauve">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+                <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+                <line x1="6" x2="6.01" y1="6" y2="6" />
+                <line x1="6" x2="6.01" y1="18" y2="18" />
+              </svg>
+            </div>
+            <h3>Lifetime Hosting Plans</h3>
+            <p>WordPress‑ready, SSD storage, 99.9% uptime.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon blush">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                <path d="m7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </div>
+            <h3>1‑1 Web Hosting</h3>
+            <p>Dedicated resources for every site.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon dusty">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+                <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+                <line x1="6" x2="6.01" y1="6" y2="6" />
+                <line x1="6" x2="6.01" y1="18" y2="18" />
+              </svg>
+            </div>
+            <h3>Lifetime Server Hosting</h3>
+            <p>Full root/SSH, PHP & Node.js friendly.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon mauve">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="m22 21-3-3" />
+                <path d="m16 16 3 3" />
+              </svg>
+            </div>
+            <h3>Round‑the‑Clock Support</h3>
+            <p>Real humans, 24/7.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="section bg-gradient-1" id="plans">
+      <div class="container">
+        <div class="section-header">
+          <h2>Everything Included in Your Hosting Lifetime Deal</h2>
+          <p>
+            Choose the perfect plan for your needs. All plans include lifetime
+            domains and hosting.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="plan-card">
+            <h3 class="plan-name">Starter Plan</h3>
+            <p class="plan-ideal">Students & Test Projects</p>
+            <div class="plan-price">$149</div>
+            <ul class="plan-features">
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                1 vCPU / 2 GB RAM
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                Free Lifetime Domain
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                SSD Storage
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                99.9% Uptime
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                SSL Certificate
+              </li>
+            </ul>
+            <a href="https://arzhost.com/vps/" class="btn btn-primary w-full"
+              >Choose Plan</a
+            >
+          </div>
+
+          <div class="plan-card popular">
+            <div class="popular-badge">Most Popular</div>
+            <h3 class="plan-name">Pro Plan</h3>
+            <p class="plan-ideal">Blogs & Portfolios</p>
+            <div class="plan-price">$249</div>
+            <ul class="plan-features">
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                2 vCPU / 4 GB RAM
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                Free Lifetime Domain
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                WordPress Ready
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                DDoS Protection
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                24/7 Support
+              </li>
+            </ul>
+            <a href="https://arzhost.com/vps/" class="btn btn-primary w-full"
+              >Choose Plan</a
+            >
+          </div>
+
+          <div class="plan-card">
+            <h3 class="plan-name">Business Plan</h3>
+            <p class="plan-ideal">eCommerce & CMS</p>
+            <div class="plan-price">$399</div>
+            <ul class="plan-features">
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                4 vCPU / 8 GB RAM
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                Free Lifetime Domain
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                High Performance
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                Advanced Security
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                Priority Support
+              </li>
+            </ul>
+            <a href="https://arzhost.com/vps/" class="btn btn-primary w-full"
+              >Choose Plan</a
+            >
+          </div>
+
+          <div class="plan-card">
+            <h3 class="plan-name">Agency Plan</h3>
+            <p class="plan-ideal">Client Hosting</p>
+            <div class="plan-price">$599</div>
+            <ul class="plan-features">
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                Host Unlimited Domains
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                White Label Options
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                Reseller Features
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                Client Management
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                Bulk Billing
+              </li>
+            </ul>
+            <a href="https://arzhost.com/vps/" class="btn btn-primary w-full"
+              >Choose Plan</a
+            >
+          </div>
+
+          <div class="plan-card">
+            <h3 class="plan-name">Enterprise Plan</h3>
+            <p class="plan-ideal">SaaS & Apps</p>
+            <div class="plan-price">$799</div>
+            <ul class="plan-features">
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                High-Performance Servers
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                Priority Support
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                Custom Solutions
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                Dedicated Resources
+              </li>
+              <li>
+                <svg
+                  class="check-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22,4 12,14.01 9,11.01" />
+                </svg>
+                SLA Guarantee
+              </li>
+            </ul>
+            <a href="https://arzhost.com/vps/" class="btn btn-primary w-full"
+              >Choose Plan</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who Needs Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Who Needs Lifetime Server Hosting?</h2>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature">
+            <h3>Freelancers & Bloggers</h3>
+            <p>Focus on content, not invoices.</p>
+          </div>
+          <div class="feature">
+            <h3>Digital Agencies</h3>
+            <p>Host client sites under one powerful account.</p>
+          </div>
+          <div class="feature">
+            <h3>eCommerce Stores</h3>
+            <p>Keep your shop open 24/7 without renewals.</p>
+          </div>
+          <div class="feature">
+            <h3>SaaS Founders & Devs</h3>
+            <p>Scale apps reliably on a one‑time paid platform.</p>
+          </div>
+          <div class="feature">
+            <h3>Startups</h3>
+            <p>Cut recurring costs while enjoying premium performance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section bg-gradient-2">
+      <div class="container">
+        <div class="section-header">
+          <h2>Key Benefits at a Glance</h2>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit">
+            <svg
+              class="check-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22,4 12,14.01 9,11.01" />
+            </svg>
+            <span>Cheap Lifetime Domain Included</span>
+          </div>
+          <div class="benefit">
+            <svg
+              class="check-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22,4 12,14.01 9,11.01" />
+            </svg>
+            <span>No Renewals, No Hidden Fees</span>
+          </div>
+          <div class="benefit">
+            <svg
+              class="check-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22,4 12,14.01 9,11.01" />
+            </svg>
+            <span>U.S.‑Based High‑Speed Servers</span>
+          </div>
+          <div class="benefit">
+            <svg
+              class="check-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22,4 12,14.01 9,11.01" />
+            </svg>
+            <span>SSL, SSD Storage & 99.9% Uptime</span>
+          </div>
+          <div class="benefit">
+            <svg
+              class="check-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22,4 12,14.01 9,11.01" />
+            </svg>
+            <span>24/7 Live Expert Support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Real Users Love Our Lifetime Hosting Plans</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial">
+            <svg
+              class="star-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+              />
+            </svg>
+            <blockquote>
+              "The best lifetime hosting deal I've seen—no more monthly fees!"
+            </blockquote>
+            <cite>— Fatima R., Blogger</cite>
+          </div>
+          <div class="testimonial">
+            <svg
+              class="star-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+              />
+            </svg>
+            <blockquote>
+              "I host all my client sites on
+              <a
+                href="https://arzhost.com/"
+                style="color: var(--primary); text-decoration: none"
+                >ARZ Host's</a
+              >
+              lifetime deal hosting. Huge savings."
+            </blockquote>
+            <cite>— Danish M., Developer</cite>
+          </div>
+          <div class="testimonial">
+            <svg
+              class="star-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polygon
+                points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+              />
+            </svg>
+            <blockquote>
+              "Free domain, blazing‑fast servers,
+              <a
+                href="https://en.wikipedia.org/wiki/WordPress"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="color: var(--primary); text-decoration: none"
+                >WordPress</a
+              >
+              in minutes. I'm sold."
+            </blockquote>
+            <cite>— Lara P., Store Owner</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-gradient-3">
+      <div class="container">
+        <div class="section-header">
+          <h2>FAQs</h2>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3 class="faq-question">Is the domain really free for life?</h3>
+            <p class="faq-answer">
+              Yes—every plan includes a lifetime domain with zero renewal fees.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Can I run WordPress?</h3>
+            <p class="faq-answer">
+              Absolutely.
+              <a
+                href="https://en.wikipedia.org/wiki/WordPress"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="color: var(--primary); text-decoration: none"
+                >WordPress</a
+              >
+              comes pre‑installed and optimized on all plans.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Are your servers fast and secure?</h3>
+            <p class="faq-answer">
+              Top‑tier U.S. datacenters, SSD storage,
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="color: var(--primary); text-decoration: none"
+                >SSL</a
+              >, DDoS protection, and 99.9% uptime.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Can I host multiple sites?</h3>
+            <p class="faq-answer">
+              Choose the Agency or Enterprise plan to host unlimited domains.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Can I upgrade later?</h3>
+            <p class="faq-answer">Yes—scale up any time with zero downtime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-gradient-cta">
+      <div class="container">
+        <div class="text-center">
+          <h2
+            style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem"
+          >
+            Stop Renting—Start Owning
+          </h2>
+          <p
+            style="
+              font-size: 1.25rem;
+              color: var(--muted-foreground);
+              margin-bottom: 2rem;
+            "
+          >
+            Lock in the best lifetime hosting today. Build, grow, and scale
+            without ever paying another hosting invoice.
+          </p>
+          <a href="https://arzhost.com/vps/" class="btn btn-primary btn-lg">
+            Grab Your Hosting Lifetime Deal + Free Domain
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="margin-left: 0.5rem"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <div class="footer-brand">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+                <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+                <line x1="6" x2="6.01" y1="6" y2="6" />
+                <line x1="6" x2="6.01" y1="18" y2="18" />
+              </svg>
+              <span>ARZ Host</span>
+            </div>
+            <p style="color: rgba(248, 237, 235, 0.8); margin-bottom: 1rem">
+              Professional lifetime hosting solutions with one-time payments and
+              forever online guarantee.
+            </p>
+            <div>
+              <p style="font-size: 0.875rem">
+                Website: <a href="https://arzhost.com/">arzhost.com</a>
+              </p>
+              <p style="font-size: 0.875rem">Phone: +1 (631) 594-8060</p>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Hosting Services</h3>
+            <ul>
+              <li>
+                <a href="https://arzhost.com/lifetime-web-hosting/"
+                  >Lifetime Web Hosting</a
+                >
+              </li>
+              <li>
+                <a href="https://arzhost.com/region-based-vps/">VPS Hosting</a>
+              </li>
+              <li>
+                <a
+                  href="https://arzhost.com/hosting/kansas-reliable-vps-hosting/"
+                  >Hong Kong VPS</a
+                >
+              </li>
+              <li><a href="https://arzhost.com/">Our Hosting Services</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="https://www.arzhost.com/about-us/">About Us</a></li>
+              <li>
+                <a href="https://www.arzhost.com/contact-us/">Contact Us</a>
+              </li>
+              <li>
+                <a href="https://www.arzhost.com/terms-conditions/"
+                  >Terms and Conditions</a
+                >
+              </li>
+              <li>
+                <a href="https://www.arzhost.com/privacy-policy/"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="https://www.arzhost.com/disclaimer/">Disclaimer</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Resources</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Web_hosting_service"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >What is Web Hosting?</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/Performance"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Web Performance Guide</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 ARZ Host. All rights reserved. Professional lifetime
+            hosting solutions.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMobileMenu() {
+        const mobileNav = document.getElementById("mobileNav");
+        mobileNav.classList.toggle("active");
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
   </body>
 </html>
