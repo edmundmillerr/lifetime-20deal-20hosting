@@ -47,6 +47,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Custom lifetime hosting colors
+        "blush-pink": "hsl(var(--blush-pink))",
+        "dusty-rose": "hsl(var(--dusty-rose))",
+        mauve: "hsl(var(--mauve))",
+        "deep-plum": "hsl(var(--deep-plum))",
+        ivory: "hsl(var(--ivory))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
